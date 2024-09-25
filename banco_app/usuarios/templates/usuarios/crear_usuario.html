@@ -1,0 +1,34 @@
+<h2>Crear Usuario</h2>
+<form method="post">
+    {% csrf_token %}
+    <b><label for="id_nombre">Nombre:</label></b>
+    {{ form.nombre }}
+    <br><br>
+
+    <b><label for="id_tipo_documento">Tipo de Documento:</label></b>
+    {{ form.tipo_documento }}
+    <br><br>
+
+    <b><label for="id_numero_documento">Número de Documento:</label></b>
+    {{ form.numero_documento }}
+    <br><br>
+
+    <b><label for="id_email">Correo Electrónico:</label></b>
+    {{ form.email }}
+    <br><br>
+
+    <b><label for="id_telefono">Teléfono:</label></b>
+    {{ form.telefono }}
+    <br><br>
+
+    <b><label for="id_fecha_nacimiento">Fecha de Nacimiento:</label></b>
+    {{ form.fecha_nacimiento }}
+    <br><br>
+
+    <b><label for="id_saldo">Saldo Inicial:</label></b>
+    {{ form.saldo }}
+    <br><br>
+
+
+    <button type="submit">Guardar</button>
+</form>

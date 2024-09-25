@@ -1,0 +1,17 @@
+<h2>Cuenta de {{ usuario.nombre }}</h2>
+
+<p>Saldo inicial: {{ usuario.saldo }} (Este valor se actualiza al añadir saldo, pero no es modificable directamente).</p>
+
+<h3>Añadir Saldo</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Añadir Saldo</button>
+</form>
+
+<h3>Historial de Transacciones</h3>
+<ul>
+    {% for transaccion in transacciones %}
+        <li>{{ transaccion.tipo_transaccion }} de {{ transaccion.monto }} el {{ transaccion.fecha }}</li>
+    {% endfor %}
+</ul>
